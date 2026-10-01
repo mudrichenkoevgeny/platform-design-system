@@ -3,6 +3,14 @@
   "typography": {
     "fontFamily": {
       "primary": { "$value": "PT Sans", "$type": "fontFamily" }
+    },
+    "fontWeight": {
+      "regular": { "$value": 400, "$type": "fontWeight" },
+      "bold": { "$value": 700, "$type": "fontWeight" }
+    },
+    "fontStyle": {
+      "normal": { "$value": "normal", "$type": "fontStyle" },
+      "italic": { "$value": "italic", "$type": "fontStyle" }
     }
   }
 }

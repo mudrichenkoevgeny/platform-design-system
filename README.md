@@ -34,7 +34,7 @@ Source tokens live in `tokens/`:
 - **`radius.json`**: Corner radius tokens (`extraSmall`, `small`, `medium`, `large`, `extraLarge`).
 - **`sizing.json`**: Component sizing dimensions (headers, buttons, dialogs, progress indicators).
 - **`elevation.json`**: Elevation and shadow tokens.
-- **`typography.json`**: Font family definitions (`PT Sans`).
+- **`typography.json`**: Font family (`PT Sans`), font weights (`regular: 400`, `bold: 700`), and font styles (`normal`, `italic`).
 
 These JSON files serve as the single source of truth (SSOT). All values are stored using standard JSON format compatible with W3C Design Tokens.
 
@@ -98,8 +98,8 @@ node scripts/generate-tokens.js
 
 The generator script parses all JSON files in `tokens/`, resolves alias references, and automatically creates files locally in the `generated/` directory:
 
-- **Compose (KMP)**: `generated/compose/GeneratedDesignTokens.kt` — Kotlin `object` containing Compose `Color` (HEX) and `Dp` values.
-- **Web (CSS)**: `generated/web/tokens.css` — CSS custom properties (`:root` & `.dark`) with HSL/HEX colors, `rem` units for spacing/radius/sizing, and `px` for elevation.
+- **Compose (KMP)**: `generated/compose/GeneratedDesignTokens.kt` — Kotlin `object` containing Compose `Color` (HEX), `Dp` values, and `Typography` constants (font family, font weights 400/700, font styles).
+- **Web (CSS)**: `generated/web/tokens.css` — CSS custom properties (`:root` & `.dark`) with HSL/HEX colors, `rem` units for spacing/radius/sizing, `px` for elevation, and `--font-family-primary`/`--font-weight-*` variables.
 - **Web (TypeScript)**: `generated/web/tokens.ts` — TypeScript constant object (`GeneratedDesignTokens`) for JS/TS UI logic and dynamic styling.
 
 > **Note**: Do not edit these generated files manually in the generator repository. All changes must originate from `tokens/`.
@@ -125,6 +125,7 @@ After copying `GeneratedDesignTokens.kt` to `kmp-platform-sdk`, Compose componen
 - `Color.kt` maps `PrimaryLight`, `PrimaryDark`, etc. from `GeneratedDesignTokens.Colors.Light.primary`.
 - `Dimens.kt` maps dimensions from `GeneratedDesignTokens.Spacing` and `GeneratedDesignTokens.Sizing`.
 - `Shapes.kt` maps corner radii from `GeneratedDesignTokens.Radius`.
+- `Typography.kt` maps font weights and styles in `ptSansFontFamily()` from `GeneratedDesignTokens.Typography`.
 
 ### Web Integration
 After copying `tokens.css` and `tokens.ts` to `web-platform-sdk`:

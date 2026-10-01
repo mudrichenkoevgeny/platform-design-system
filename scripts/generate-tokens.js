@@ -199,6 +199,14 @@ object GeneratedDesignTokens {
         val header: Dp = ${tokens.elevation.header.$value}.dp
         val shadow: Dp = ${tokens.elevation.shadow.$value}.dp
     }
+
+    object Typography {
+        val fontFamilyPrimary: String = "${tokens.typography.fontFamily.primary.$value}"
+        val fontWeightRegular: Int = ${tokens.typography.fontWeight.regular.$value}
+        val fontWeightBold: Int = ${tokens.typography.fontWeight.bold.$value}
+        val fontStyleNormal: String = "${tokens.typography.fontStyle.normal.$value}"
+        val fontStyleItalic: String = "${tokens.typography.fontStyle.italic.$value}"
+    }
 }
 `
 }
@@ -294,6 +302,10 @@ function generateWebCssTokens(tokens) {
 
   --elevation-header: ${dpToPx(tokens.elevation.header.$value)};
   --elevation-shadow: ${dpToPx(tokens.elevation.shadow.$value)};
+
+  --font-family-primary: '${tokens.typography.fontFamily.primary.$value}', sans-serif;
+  --font-weight-regular: ${tokens.typography.fontWeight.regular.$value};
+  --font-weight-bold: ${tokens.typography.fontWeight.bold.$value};
 }
 
 .dark {
@@ -415,6 +427,19 @@ function generateWebTsTokens(tokens) {
   elevation: {
     header: ${tokens.elevation.header.$value},
     shadow: ${tokens.elevation.shadow.$value}
+  },
+  typography: {
+    fontFamily: {
+      primary: '${tokens.typography.fontFamily.primary.$value}'
+    },
+    fontWeight: {
+      regular: ${tokens.typography.fontWeight.regular.$value},
+      bold: ${tokens.typography.fontWeight.bold.$value}
+    },
+    fontStyle: {
+      normal: '${tokens.typography.fontStyle.normal.$value}',
+      italic: '${tokens.typography.fontStyle.italic.$value}'
+    }
   }
 } as const
 `

@@ -52,7 +52,7 @@ Edit or add tokens in the appropriate JSON file under `tokens/`:
 - `tokens/radius.json`: Corner radii definitions.
 - `tokens/sizing.json`: Component dimensions (buttons, headers, dialogs, etc.).
 - `tokens/elevation.json`: Header and shadow elevations.
-- `tokens/typography.json`: Font family specifications.
+- `tokens/typography.json`: Font family, font weights (`regular: 400`, `bold: 700`), and font styles (`normal`, `italic`).
 
 Ensure all token definitions adhere to the **W3C Design Tokens Format** schema (e.g., using `"$value"` and `"$type"`).
 

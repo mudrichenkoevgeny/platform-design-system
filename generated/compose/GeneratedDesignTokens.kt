@@ -71,4 +71,12 @@ object GeneratedDesignTokens {
         val header: Dp = 2.dp
         val shadow: Dp = 4.dp
     }
+
+    object Typography {
+        val fontFamilyPrimary: String = "PT Sans"
+        val fontWeightRegular: Int = 400
+        val fontWeightBold: Int = 700
+        val fontStyleNormal: String = "normal"
+        val fontStyleItalic: String = "italic"
+    }
 }

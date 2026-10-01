@@ -53,5 +53,18 @@ export const GeneratedDesignTokens = {
   elevation: {
     header: 2,
     shadow: 4
+  },
+  typography: {
+    fontFamily: {
+      primary: 'PT Sans'
+    },
+    fontWeight: {
+      regular: 400,
+      bold: 700
+    },
+    fontStyle: {
+      normal: 'normal',
+      italic: 'italic'
+    }
   }
 } as const
