@@ -126,7 +126,7 @@ function generateKotlinTokens(tokens) {
 
   const toColorHex = (hex) => `Color(0xFF${hex.replace('#', '').toUpperCase()})`
 
-  return `package io.github.mudrichenkoevgeny.kmp.core.common.ui.theme.generated
+  return `package io.github.mudrichenkoevgeny.kmp.core.common.ui.theme.tokens
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp

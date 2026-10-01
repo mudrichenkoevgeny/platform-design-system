@@ -77,8 +77,8 @@ Manually copy the generated artifacts to their respective target SDK repositorie
 | Generated Local File | Target Repository & Path |
 | :--- | :--- |
 | `generated/compose/GeneratedDesignTokens.kt` | **`kmp-platform-sdk`**<br>`core/common/src/commonMain/kotlin/io/github/mudrichenkoevgeny/kmp/core/common/ui/theme/tokens/GeneratedDesignTokens.kt` |
-| `generated/web/tokens.css` | **`web-platform-sdk`**<br>`packages/feature-clientuser/src/styles/tokens/tokens.css` |
-| `generated/web/tokens.ts` | **`web-platform-sdk`**<br>`packages/feature-clientuser/src/styles/tokens/tokens.ts` |
+| `generated/web/tokens.css` | **`web-platform-sdk`**<br>`packages/core-common/src/theme/tokens/tokens.css` |
+| `generated/web/tokens.ts` | **`web-platform-sdk`**<br>`packages/core-common/src/theme/tokens/tokens.ts` |
 
 ---
 

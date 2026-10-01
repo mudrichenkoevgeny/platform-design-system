@@ -1,4 +1,4 @@
-package io.github.mudrichenkoevgeny.kmp.core.common.ui.theme.generated
+package io.github.mudrichenkoevgeny.kmp.core.common.ui.theme.tokens
 
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.Dp
