@@ -71,14 +71,21 @@ This updates files in the local `generated/` directory:
 ### Step 3: Verify Output Files
 Inspect the generated files in `generated/` to ensure valid Kotlin syntax, CSS custom properties, and TypeScript objects were produced without errors.
 
-### Step 4: Distribute to Target SDKs
-Manually copy the generated artifacts to their respective target SDK repositories:
+### Step 4: Distribute Artifacts & Font Assets
+Manually copy the generated artifacts and font assets to their respective target SDK repositories:
 
+#### Generated Token Files
 | Generated Local File | Target Repository & Path |
 | :--- | :--- |
 | `generated/compose/GeneratedDesignTokens.kt` | **`kmp-platform-sdk`**<br>`core/common/src/commonMain/kotlin/io/github/mudrichenkoevgeny/kmp/core/common/ui/theme/tokens/GeneratedDesignTokens.kt` |
 | `generated/web/tokens.css` | **`web-platform-sdk`**<br>`packages/core-common/src/theme/tokens/tokens.css` |
 | `generated/web/tokens.ts` | **`web-platform-sdk`**<br>`packages/core-common/src/theme/tokens/tokens.ts` |
+
+#### Font Asset Files
+| Local Font Directory | Target Repository & Path |
+| :--- | :--- |
+| `assets/fonts/ttf/*.ttf` | **`kmp-platform-sdk`**<br>`core/common/src/commonMain/composeResources/font/` |
+| `assets/fonts/woff2/*.woff2` | **`web-platform-sdk`**<br>`packages/core-common/src/assets/fonts/` |
 
 ---
 

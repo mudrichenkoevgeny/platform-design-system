@@ -108,13 +108,22 @@ The generator script parses all JSON files in `tokens/`, resolves alias referenc
 
 ## 6. Output Artifacts & Target Locations
 
-After generation, the generated files are manually copied to their respective target SDK repositories:
+After generation, the generated token files and font assets are manually copied to their respective target SDK repositories:
+
+### Token Artifacts
 
 | Generated Local Artifact | Target SDK Repository & Path |
 | :--- | :--- |
 | `generated/compose/GeneratedDesignTokens.kt` | `kmp-platform-sdk`<br>`core/common/src/commonMain/kotlin/io/github/mudrichenkoevgeny/kmp/core/common/ui/theme/tokens/GeneratedDesignTokens.kt` |
 | `generated/web/tokens.css` | `web-platform-sdk`<br>`packages/core-common/src/theme/tokens/tokens.css` |
 | `generated/web/tokens.ts` | `web-platform-sdk`<br>`packages/core-common/src/theme/tokens/tokens.ts` |
+
+### Font Asset Files
+
+| Local Font Directory | Target SDK Repository & Path |
+| :--- | :--- |
+| `assets/fonts/ttf/*.ttf` | `kmp-platform-sdk`<br>`core/common/src/commonMain/composeResources/font/` |
+| `assets/fonts/woff2/*.woff2` | `web-platform-sdk`<br>`packages/core-common/src/assets/fonts/` |
 
 ---
 
@@ -126,12 +135,14 @@ After copying `GeneratedDesignTokens.kt` to `kmp-platform-sdk`, Compose componen
 - `Dimens.kt` maps dimensions from `GeneratedDesignTokens.Spacing` and `GeneratedDesignTokens.Sizing`.
 - `Shapes.kt` maps corner radii from `GeneratedDesignTokens.Radius`.
 - `Typography.kt` maps font weights and styles in `ptSansFontFamily()` from `GeneratedDesignTokens.Typography`.
+- **Font Resources**: Physical font files (`pt_sans_regular.ttf`, `pt_sans_bold.ttf`, `pt_sans_italic.ttf`, `pt_sans_bold_italic.ttf`) must be placed in `composeResources/font/` (e.g. `core/common/src/commonMain/composeResources/font/`) so Compose Resources can load them via `Res.font...`.
 
 ### Web Integration
 After copying `tokens.css` and `tokens.ts` to `web-platform-sdk`:
 - `packages/feature-clientuser/src/index.css` (or main stylesheet) imports `./styles/tokens/tokens.css`.
-- `tokens.css` defines HSL and Hex CSS variables (`--color-primary`, `--spacing-md`, `--radius-sm`, `--dimen-action-button-height`, etc.) used by Tailwind CSS and custom component styling.
+- `tokens.css` defines HSL and Hex CSS variables (`--color-primary`, `--spacing-md`, `--radius-sm`, `--dimen-action-button-height`, `--font-family-primary`, etc.) used by Tailwind CSS and custom component styling.
 - `tokens.ts` exports `GeneratedDesignTokens` object for typed usage in TypeScript components, inline styles, or utility functions.
+- **Font Resources**: Web fonts (e.g. `@font-face` definitions or Google Fonts import for `PT Sans`) must be loaded in the main stylesheet (`index.css` or `globals.css`).
 
 ---
 

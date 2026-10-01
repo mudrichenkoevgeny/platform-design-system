@@ -235,7 +235,39 @@ function generateWebCssTokens(tokens) {
   const dpToRem = (dpVal) => `${dpVal / 16}rem`
   const dpToPx = (dpVal) => `${dpVal}px`
 
-  return `:root {
+  return `@font-face {
+  font-family: '${tokens.typography.fontFamily.primary.$value}';
+  font-style: ${tokens.typography.fontStyle.normal.$value};
+  font-weight: ${tokens.typography.fontWeight.regular.$value};
+  font-display: swap;
+  src: url('../../assets/fonts/pt-sans-regular.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: '${tokens.typography.fontFamily.primary.$value}';
+  font-style: ${tokens.typography.fontStyle.normal.$value};
+  font-weight: ${tokens.typography.fontWeight.bold.$value};
+  font-display: swap;
+  src: url('../../assets/fonts/pt-sans-bold.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: '${tokens.typography.fontFamily.primary.$value}';
+  font-style: ${tokens.typography.fontStyle.italic.$value};
+  font-weight: ${tokens.typography.fontWeight.regular.$value};
+  font-display: swap;
+  src: url('../../assets/fonts/pt-sans-italic.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: '${tokens.typography.fontFamily.primary.$value}';
+  font-style: ${tokens.typography.fontStyle.italic.$value};
+  font-weight: ${tokens.typography.fontWeight.bold.$value};
+  font-display: swap;
+  src: url('../../assets/fonts/pt-sans-bold-italic.woff2') format('woff2');
+}
+
+:root {
   --color-primary: ${hexToHsl(lightPrimary)};
   --color-primary-hex: ${lightPrimary};
   --color-on-primary: ${hexToHsl(lightOnPrimary)};
