@@ -1,0 +1,50 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "color": {
+    "primitive": {
+      "charcoal": {
+        "900": { "$value": "#161C22", "$type": "color" },
+        "800": { "$value": "#191C1A", "$type": "color" },
+        "700": { "$value": "#2C3137", "$type": "color" },
+        "600": { "$value": "#424952", "$type": "color" },
+        "300": { "$value": "#C4CBD4", "$type": "color" },
+        "100": { "$value": "#E2E6ED", "$type": "color" }
+      },
+      "neutral": {
+        "900": { "$value": "#121412", "$type": "color" },
+        "800": { "$value": "#191C1A", "$type": "color" },
+        "200": { "$value": "#E2E3DC", "$type": "color" },
+        "100": { "$value": "#E5E4E4", "$type": "color" },
+        "white": { "$value": "#FFFFFF", "$type": "color" }
+      },
+      "error": {
+        "500": { "$value": "#BA1A1A", "$type": "color" },
+        "700": { "$value": "#93000A", "$type": "color" }
+      }
+    },
+    "semantic": {
+      "light": {
+        "primary": { "$value": "{color.primitive.charcoal.700}", "$type": "color" },
+        "onPrimary": { "$value": "{color.primitive.neutral.white}", "$type": "color" },
+        "primaryContainer": { "$value": "{color.primitive.charcoal.100}", "$type": "color" },
+        "onPrimaryContainer": { "$value": "{color.primitive.charcoal.900}", "$type": "color" },
+        "background": { "$value": "{color.primitive.neutral.100}", "$type": "color" },
+        "onBackground": { "$value": "{color.primitive.neutral.800}", "$type": "color" },
+        "surface": { "$value": "{color.primitive.neutral.100}", "$type": "color" },
+        "onSurface": { "$value": "{color.primitive.neutral.800}", "$type": "color" },
+        "error": { "$value": "{color.primitive.error.500}", "$type": "color" }
+      },
+      "dark": {
+        "primary": { "$value": "{color.primitive.charcoal.300}", "$type": "color" },
+        "onPrimary": { "$value": "{color.primitive.charcoal.700}", "$type": "color" },
+        "primaryContainer": { "$value": "{color.primitive.charcoal.600}", "$type": "color" },
+        "onPrimaryContainer": { "$value": "{color.primitive.charcoal.100}", "$type": "color" },
+        "background": { "$value": "{color.primitive.neutral.900}", "$type": "color" },
+        "onBackground": { "$value": "{color.primitive.neutral.200}", "$type": "color" },
+        "surface": { "$value": "{color.primitive.neutral.900}", "$type": "color" },
+        "onSurface": { "$value": "{color.primitive.neutral.200}", "$type": "color" },
+        "error": { "$value": "{color.primitive.error.700}", "$type": "color" }
+      }
+    }
+  }
+}

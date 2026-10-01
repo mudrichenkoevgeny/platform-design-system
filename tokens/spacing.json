@@ -1,0 +1,9 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "spacing": {
+    "extraSmall": { "$value": 4, "$type": "dimension", "unit": "dp" },
+    "small": { "$value": 8, "$type": "dimension", "unit": "dp" },
+    "medium": { "$value": 16, "$type": "dimension", "unit": "dp" },
+    "large": { "$value": 24, "$type": "dimension", "unit": "dp" }
+  }
+}

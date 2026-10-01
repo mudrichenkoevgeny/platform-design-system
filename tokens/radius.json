@@ -1,0 +1,10 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "radius": {
+    "extraSmall": { "$value": 4, "$type": "dimension", "unit": "dp" },
+    "small": { "$value": 8, "$type": "dimension", "unit": "dp" },
+    "medium": { "$value": 12, "$type": "dimension", "unit": "dp" },
+    "large": { "$value": 16, "$type": "dimension", "unit": "dp" },
+    "extraLarge": { "$value": 24, "$type": "dimension", "unit": "dp" }
+  }
+}

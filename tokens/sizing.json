@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "sizing": {
+    "headerHeight": { "$value": 64, "$type": "dimension", "unit": "dp" },
+    "iconSizeHeader": { "$value": 32, "$type": "dimension", "unit": "dp" },
+    "iconButtonSize": { "$value": 48, "$type": "dimension", "unit": "dp" },
+    "actionButtonHeight": { "$value": 52, "$type": "dimension", "unit": "dp" },
+    "actionButtonIconSize": { "$value": 20, "$type": "dimension", "unit": "dp" },
+    "rowHeight": { "$value": 64, "$type": "dimension", "unit": "dp" },
+    "progressIndicatorStrokeWidth": { "$value": 4, "$type": "dimension", "unit": "dp" },
+    "progressIndicatorStrokeWidthSmall": { "$value": 2, "$type": "dimension", "unit": "dp" },
+    "progressIndicatorSizeSmall": { "$value": 24, "$type": "dimension", "unit": "dp" },
+    "progressIndicatorSizeLarge": { "$value": 52, "$type": "dimension", "unit": "dp" },
+    "qrCodeSize": { "$value": 200, "$type": "dimension", "unit": "dp" },
+    "previewContainerHeight": { "$value": 300, "$type": "dimension", "unit": "dp" },
+    "dialogWidth": { "$value": 480, "$type": "dimension", "unit": "dp" },
+    "dialogHeight": { "$value": 520, "$type": "dimension", "unit": "dp" },
+    "maxFormWidth": { "$value": 480, "$type": "dimension", "unit": "dp" },
+    "maxContentWidth": { "$value": 800, "$type": "dimension", "unit": "dp" },
+    "maxButtonWidth": { "$value": 400, "$type": "dimension", "unit": "dp" },
+    "navigationRailWidth": { "$value": 80, "$type": "dimension", "unit": "dp" }
+  }
+}
