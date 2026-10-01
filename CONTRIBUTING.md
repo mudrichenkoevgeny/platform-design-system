@@ -77,15 +77,15 @@ Manually copy the generated artifacts and font assets to their respective target
 #### Generated Token Files
 | Generated Local File | Target Repository & Path |
 | :--- | :--- |
-| `generated/compose/GeneratedDesignTokens.kt` | **`kmp-platform-sdk`**<br>`core/common/src/commonMain/kotlin/io/github/mudrichenkoevgeny/kmp/core/common/ui/theme/tokens/GeneratedDesignTokens.kt` |
-| `generated/web/tokens.css` | **`web-platform-sdk`**<br>`packages/core-common/src/theme/tokens/tokens.css` |
-| `generated/web/tokens.ts` | **`web-platform-sdk`**<br>`packages/core-common/src/theme/tokens/tokens.ts` |
+| `generated/compose/GeneratedDesignTokens.kt` | [**`kmp-platform-sdk`**](https://github.com/mudrichenkoevgeny/kmp-platform-sdk)<br>`core/common/src/commonMain/kotlin/io/github/mudrichenkoevgeny/kmp/core/common/ui/theme/tokens/GeneratedDesignTokens.kt` |
+| `generated/web/tokens.css` | [**`web-platform-sdk`**](https://github.com/mudrichenkoevgeny/web-platform-sdk)<br>`packages/core-common/src/theme/tokens/tokens.css` |
+| `generated/web/tokens.ts` | [**`web-platform-sdk`**](https://github.com/mudrichenkoevgeny/web-platform-sdk)<br>`packages/core-common/src/theme/tokens/tokens.ts` |
 
 #### Font Asset Files
 | Local Font Directory | Target Repository & Path |
 | :--- | :--- |
-| `assets/fonts/ttf/*.ttf` | **`kmp-platform-sdk`**<br>`core/common/src/commonMain/composeResources/font/` |
-| `assets/fonts/woff2/*.woff2` | **`web-platform-sdk`**<br>`packages/core-common/src/assets/fonts/` |
+| `assets/fonts/ttf/*.ttf` | [**`kmp-platform-sdk`**](https://github.com/mudrichenkoevgeny/kmp-platform-sdk)<br>`core/common/src/commonMain/composeResources/font/` |
+| `assets/fonts/woff2/*.woff2` | [**`web-platform-sdk`**](https://github.com/mudrichenkoevgeny/web-platform-sdk)<br>`packages/core-common/src/assets/fonts/` |
 
 ---
 

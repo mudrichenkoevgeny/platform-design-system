@@ -4,6 +4,15 @@ This repository contains the platform-independent **Design Token system** for KM
 
 ---
 
+## Consumer SDKs & Ecosystem
+
+This design system serves as the centralized **Single Source of Truth (SSOT)** for visual design decisions across the platform ecosystem:
+
+- [**`kmp-platform-sdk`**](https://github.com/mudrichenkoevgeny/kmp-platform-sdk) — Modular Kotlin Multiplatform client SDK for Android & Web (Wasm) built with Compose Multiplatform.
+- [**`web-platform-sdk`**](https://github.com/mudrichenkoevgeny/web-platform-sdk) — Modular web client SDK and frontend applications built with Tailwind CSS & TypeScript.
+
+---
+
 ## Architecture Overview
 
 ```
@@ -114,16 +123,16 @@ After generation, the generated token files and font assets are manually copied 
 
 | Generated Local Artifact | Target SDK Repository & Path |
 | :--- | :--- |
-| `generated/compose/GeneratedDesignTokens.kt` | `kmp-platform-sdk`<br>`core/common/src/commonMain/kotlin/io/github/mudrichenkoevgeny/kmp/core/common/ui/theme/tokens/GeneratedDesignTokens.kt` |
-| `generated/web/tokens.css` | `web-platform-sdk`<br>`packages/core-common/src/theme/tokens/tokens.css` |
-| `generated/web/tokens.ts` | `web-platform-sdk`<br>`packages/core-common/src/theme/tokens/tokens.ts` |
+| `generated/compose/GeneratedDesignTokens.kt` | [`kmp-platform-sdk`](https://github.com/mudrichenkoevgeny/kmp-platform-sdk)<br>`core/common/src/commonMain/kotlin/io/github/mudrichenkoevgeny/kmp/core/common/ui/theme/tokens/GeneratedDesignTokens.kt` |
+| `generated/web/tokens.css` | [`web-platform-sdk`](https://github.com/mudrichenkoevgeny/web-platform-sdk)<br>`packages/core-common/src/theme/tokens/tokens.css` |
+| `generated/web/tokens.ts` | [`web-platform-sdk`](https://github.com/mudrichenkoevgeny/web-platform-sdk)<br>`packages/core-common/src/theme/tokens/tokens.ts` |
 
 ### Font Asset Files
 
 | Local Font Directory | Target SDK Repository & Path |
 | :--- | :--- |
-| `assets/fonts/ttf/*.ttf` | `kmp-platform-sdk`<br>`core/common/src/commonMain/composeResources/font/` |
-| `assets/fonts/woff2/*.woff2` | `web-platform-sdk`<br>`packages/core-common/src/assets/fonts/` |
+| `assets/fonts/ttf/*.ttf` | [`kmp-platform-sdk`](https://github.com/mudrichenkoevgeny/kmp-platform-sdk)<br>`core/common/src/commonMain/composeResources/font/` |
+| `assets/fonts/woff2/*.woff2` | [`web-platform-sdk`](https://github.com/mudrichenkoevgeny/web-platform-sdk)<br>`packages/core-common/src/assets/fonts/` |
 
 ---
 
